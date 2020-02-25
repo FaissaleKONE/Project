@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thanks Lord</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="menu-bar">
+        <ul>
+            <li class="active"><a href="newyears.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+
+            <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>About Me</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="#">Mission</a></li>
+                        <li><a href="#">Vision</a></li>
+                        <li><a href="#">Team / Equipe</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li><a href="#"><i class="fa fa-clone" aria-hidden="true"></i>Services</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="#">Web Designing</a></li>
+
+                        <li class="hover-me"><a href="#"> Marketing </a><i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="#">SEO</a></li>
+                                    <li><a href="#">Social Media</a></li>
+                                    <li><a href="#">Email Marketing</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="hover-me"><a href="#">Mobile App</a><i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="#">Android App</a></li>
+                                    <li><a href="#">iOS App</a></li>
+                                    <li><a href="#">Ionic App</a></li>
+                                    <li><a href="#">Flutter App</a></li>
+                                    <li><a href="#">Unity App</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li><a href="goodclient.html"><i class="fa fa-users" aria-hidden="true"></i>Clients</a></li>
+            <li><a href="#"><i class="fa fa-angellist" aria-hidden="true"></i>Investers</a></li>
+            <li><a href="#"><i class="fa fa-inr" aria-hidden="true"></i>Pricing</a></li>
+            <li><a href="#"><i class="fa fa-edit" aria-hidden="true"></i>Training</a></li>
+            <li><a href="client.html"><i class="fa fa-phone" aria-hidden="true"></i>Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="Login()">Login</button>
+                <button type="button" class="toggle-btn" onclick="Register()">Register</button>
+            </div>
+
+            <!-- <div class="social-icons">
+                <a href="#"><img src="img/facebook.png" alt="" class="social icon font1"></a>
+                <a href="#"><img src="img/twitter.png" alt="" class="social icon font2"></a>
+                <a href="#"><img src="img/gmail.png" alt="" class="social icon font3"></a>
+            </div> -->
+
+            <div class="container_icons">
+                <a href="https://web.facebook.com/?_rdc=1&_rdr" class="social"><img src="img/logo_Facebook.png" alt="" class="icon">
+                    <div class="font1"></div>
+                </a>
+                <a href="https://twitter.com/login?lang=fr" class="social"><img src="img/logo_Twitter.png" alt="" class="icon">
+                    <div class="font2"></div>
+                </a>
+                <a href="https://fr.linkedin.com/" class="social"><img src="img/logo_Linkedin.png" alt="" class="icon">
+                    <div class="font3"></div>
+                </a>
+                <a href="https://www.instagram.com/accounts/login/?hl=fr" class="social"><img src="img/logo_Instagram.png" alt="" class="icon">
+                    <div class="font4"></div>
+                </a>
+                <a href="https://accounts.google.com/ServiceLogin/signinchooser?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin" class="social"><img src="img/logo_Gmail.png" alt="" class="icon">
+                    <div class="font5"></div>
+                </a>
+            </div>
+
+            <form action="" id="Login" class="input-group">
+                <input type="text" name="username" id="username" placeholder="Enter Username" required>
+                <input type="password" name="password" id="password" placeholder="Enter Password" required>
+                <input type="checkbox" class="chech-box"><span class="span_checkbox">Remember Password</span>
+                <button type="submit" class="submit-btn">
+                    Login
+                </button>
+            </form>
+
+            <form action="" id="Register" class="input-group">
+                <input type="text" name="username" id="username" placeholder="Enter Username" required>
+                <input type="email" name="email" id="email" placeholder="Enter Email" required>
+                <input type="password" name="password" id="password" placeholder="Enter Password" required>
+                <input type="checkbox" class="chech-box"><span class="span_checkbox">I agree to the terms & conditions</span>
+                <button type="submit" class="submit-btn">
+                    Register
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var x = document.getElementById("Login");
+        var y = document.getElementById("Register");
+        var z = document.getElementById("btn");
+
+        function Login() {
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+        }
+
+        function Register() {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+    </script>
+</body>
+
+</html>

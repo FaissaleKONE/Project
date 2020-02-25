@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thanks Lord</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .hero {
+            height: 100%;
+            width: 100%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/beach.jpg);
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+        }
+        
+        .form-box {
+            width: 380px;
+            height: 480px;
+            position: relative;
+            margin: 6% auto;
+            background-color: rgb(176, 176, 241);
+            padding: 5px;
+            overflow: hidden;
+            /* background: rgba(221, 221, 221, 0.74); */
+        }
+        
+        .button-box {
+            width: 220px;
+            margin: 35px auto;
+            position: relative;
+            box-shadow: 0 0 20px 9px #ff61241f;
+            border-radius: 30px;
+        }
+        
+        .toggle-btn {
+            padding: 10px 30px;
+            cursor: pointer;
+            background: transparent;
+            border: 0;
+            outline: none;
+            position: relative;
+        }
+        
+        #btn {
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 110px;
+            height: 100%;
+            background: linear-gradient(to right, #ff105f, #ffad06);
+            border-radius: 30px;
+            transition: .5s;
+        }
+        /* .social-icons {
+            margin: 30px auto;
+            text-align: center;
+            width: 30px;
+            margin: 0 12px;
+            box-shadow: 0 0 20px 0 #7f7f7f3d;
+            cursor: pointer;
+            border-radius: 50%;
+        } */
+        /* Icons*/
+        
+        .container_icons {
+            text-align: center;
+        }
+        
+        .social {
+            background-color: rgba(0, 0, 0, 0.2);
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            border-radius: 50%;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            position: relative;
+            cursor: pointer;
+            margin: 30px auto;
+            margin: 0 12px;
+            box-shadow: 0 0 20px 0 #7f7f7f3d;
+            /* margin-left: 10px; */
+        }
+        
+        .font1 {
+            display: block;
+            height: 40px;
+            width: 40px;
+            background-color: rgb(45, 10, 170);
+            position: absolute;
+            z-index: 1;
+            top: -40px;
+            transition: 0.5s;
+        }
+        
+        .font2 {
+            display: block;
+            height: 40px;
+            width: 40px;
+            background-color: blue;
+            position: absolute;
+            z-index: 1;
+            top: -40px;
+            transition: 0.5s;
+        }
+        
+        .font3 {
+            display: block;
+            height: 40px;
+            width: 40px;
+            background-color: royalblue;
+            position: absolute;
+            z-index: 1;
+            top: -40px;
+            transition: 0.5s;
+        }
+        
+        .font4 {
+            display: block;
+            height: 40px;
+            width: 40px;
+            background-color: rgb(199, 78, 78);
+            position: absolute;
+            z-index: 1;
+            top: -40px;
+            transition: 0.5s;
+        }
+        
+        .font5 {
+            display: block;
+            height: 40px;
+            width: 40px;
+            background-color: red;
+            position: absolute;
+            z-index: 1;
+            top: -40px;
+            transition: 0.5s;
+        }
+        
+        .social .icon {
+            width: 30px;
+            height: 30px;
+            z-index: 2;
+        }
+        
+        .social:hover .font1 {
+            top: 0;
+        }
+        
+        .social:hover .font2 {
+            top: 0;
+        }
+        
+        .social:hover .font3 {
+            top: 0;
+        }
+        
+        .social:hover .font4 {
+            top: 0;
+        }
+        
+        .social:hover .font5 {
+            top: 0;
+        }
+        /* /Icons */
+        
+        .input-group {
+            top: 180px;
+            position: absolute;
+            width: 280px;
+            transition: .5s;
+        }
+        
+        .input-group input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px 0;
+            margin: 5px 0;
+            border-left: 0;
+            border-top: 0;
+            border-right: 0;
+            border-bottom: 1px solid #999;
+            outline: none;
+            background: transparent;
+        }
+        /* .input-field {
+            width: 100%;
+            padding: 10px 0;
+            margin: 5px 0;
+            border-left: 0;
+            border-top: 0;
+            border-right: 0;
+            border-bottom: 5px solid #999;
+            outline: none;
+            background: transparent;
+        } */
+        
+        .chech-box {
+            margin: 30px 10px 30px 0;
+        }
+        
+        .span_checkbox {
+            color: #777;
+            font-size: 12px;
+            bottom: 68px;
+            position: absolute;
+        }
+        
+        .submit-btn {
+            width: 85%;
+            padding: 10px 30px;
+            cursor: pointer;
+            display: block;
+            margin: auto;
+            background: linear-gradient(to right, #ff105f, #ffad06);
+            border: 0;
+            outline: none;
+            border-radius: 30px;
+        }
+        
+        #Login {
+            left: 50px;
+        }
+        
+        #Register {
+            left: 450px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu-bar">
+        <ul>
+            <li class="active"><a href="newyears.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+
+            <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>About Me</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="#">Mission</a></li>
+                        <li><a href="#">Vision</a></li>
+                        <li><a href="#">Team / Equipe</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li><a href="#"><i class="fa fa-clone" aria-hidden="true"></i>Services</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="#">Web Designing</a></li>
+
+                        <li class="hover-me"><a href="#"> Marketing </a><i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="#">SEO</a></li>
+                                    <li><a href="#">Social Media</a></li>
+                                    <li><a href="#">Email Marketing</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="hover-me"><a href="#">Mobile App</a><i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="#">Android App</a></li>
+                                    <li><a href="#">iOS App</a></li>
+                                    <li><a href="#">Ionic App</a></li>
+                                    <li><a href="#">Flutter App</a></li>
+                                    <li><a href="#">Unity App</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li><a href="goodclient.html"><i class="fa fa-users" aria-hidden="true"></i>Clients</a></li>
+            <li><a href="#"><i class="fa fa-angellist" aria-hidden="true"></i>Investers</a></li>
+            <li><a href="#"><i class="fa fa-inr" aria-hidden="true"></i>Pricing</a></li>
+            <li><a href="#"><i class="fa fa-edit" aria-hidden="true"></i>Training</a></li>
+            <li><a href="client.html"><i class="fa fa-phone" aria-hidden="true"></i>Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="Login()">Login</button>
+                <button type="button" class="toggle-btn" onclick="Register()">Register</button>
+            </div>
+
+            <!-- <div class="social-icons">
+                <a href="#"><img src="img/facebook.png" alt="" class="social icon font1"></a>
+                <a href="#"><img src="img/twitter.png" alt="" class="social icon font2"></a>
+                <a href="#"><img src="img/gmail.png" alt="" class="social icon font3"></a>
+            </div> -->
+
+            <div class="container_icons">
+                <a href="https://web.facebook.com/?_rdc=1&_rdr" class="social"><img src="img/logo_Facebook.png" alt="" class="icon">
+                    <div class="font1"></div>
+                </a>
+                <a href="https://twitter.com/login?lang=fr" class="social"><img src="img/logo_Twitter.png" alt="" class="icon">
+                    <div class="font2"></div>
+                </a>
+                <a href="https://fr.linkedin.com/" class="social"><img src="img/logo_Linkedin.png" alt="" class="icon">
+                    <div class="font3"></div>
+                </a>
+                <a href="https://www.instagram.com/accounts/login/?hl=fr" class="social"><img src="img/logo_Instagram.png" alt="" class="icon">
+                    <div class="font4"></div>
+                </a>
+                <a href="https://accounts.google.com/ServiceLogin/signinchooser?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin" class="social"><img src="img/logo_Gmail.png" alt="" class="icon">
+                    <div class="font5"></div>
+                </a>
+            </div>
+
+            <form action="" id="Login" class="input-group">
+                <input type="text" name="username" id="username" placeholder="Enter Username" required>
+                <input type="password" name="password" id="password" placeholder="Enter Password" required>
+                <input type="checkbox" class="chech-box"><span class="span_checkbox">Remember Password</span>
+                <button type="submit" class="submit-btn">
+                    Login
+                </button>
+            </form>
+
+            <form action="" id="Register" class="input-group">
+                <input type="text" name="username" id="username" placeholder="Enter Username" required>
+                <input type="email" name="email" id="email" placeholder="Enter Email" required>
+                <input type="password" name="password" id="password" placeholder="Enter Password" required>
+                <input type="checkbox" class="chech-box"><span class="span_checkbox">I agree to the terms & conditions</span>
+                <button type="submit" class="submit-btn">
+                    Register
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var x = document.getElementById("Login");
+        var y = document.getElementById("Register");
+        var z = document.getElementById("btn");
+
+        function Login() {
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+        }
+
+        function Register() {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+    </script>
+</body>
+
+</html>
