@@ -28,7 +28,7 @@
                     <div class="col-md-5 text-center probootstrap-animate">
                         <div class="probootstrap-heading dark">
                             <h1 class="primary-heading">Découvre</h1><br>
-                            <h3 class="secondary-heading">Notre </nobr> Magasin</h3>
+                            <h3 class="secondary-heading">Magasin</h3>
                             <span class="seperator">* * * * * *</span>
                         </div>
                         <p>

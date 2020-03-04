@@ -14,8 +14,6 @@
         <link rel="icon" type="image/png" href="favicon.ico">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 	<!--===============================================================================================-->
-		<!-- <link rel="stylesheet" type="text/css" href="css_c/bootstrap.min.css"> -->
-	<!--===============================================================================================-->
 		<link rel="stylesheet" type="text/css" href="vendor_c/animate/animate.css">
 	<!--===============================================================================================-->  
 		<link rel="stylesheet" type="text/css" href="vendor_c/css-hamburgers/hamburgers.min.css">
@@ -31,16 +29,13 @@
 	<!--===============================================================================================-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <!--===============================================================================================-->
-        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
-    <!--===============================================================================================-->
 </head>
 
 <body data-spy="scroll" data-target=".navbar-collapse">
 
     <!-- Start your project here-->
 
-        <!-- commandes plats margin-bottom: 18.5rem;-->
+        <!-- commandes plats -->
         <div class="container" style="background: white">
 
             <h3 align="center">PASSER VOTRE COMMANDE ICI</h3> <br>

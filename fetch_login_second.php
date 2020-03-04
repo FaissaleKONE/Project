@@ -5,7 +5,7 @@
   $pass = "";
 
   try {
-    $dbh = new PDO ("mysql:host=$serveur;dbname=dbkone", $login, $pass);
+    $dbh = new PDO ("mysql:host=$serveur;dbname=dbhvente", $login, $pass);
     $dbh-> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Variables

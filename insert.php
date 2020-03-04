@@ -2,7 +2,7 @@
 
     if (isset($_POST["item_name"])) { 
 
-        $connect = new PDO("mysql:host=localhost;dbname=dbkone", "root", "");
+        $connect = new PDO("mysql:host=localhost;dbname=dbhvente", "root", "");
         $order_id = uniqid();
 
         for($count = 0; $count < count($_POST["item_name"]); $count++) {

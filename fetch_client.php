@@ -5,7 +5,7 @@
     $pass = "";
 
     try {
-        $dbh = new PDO ("mysql:host=$serveur;dbname=dbkone", $login, $pass);
+        $dbh = new PDO ("mysql:host=$serveur;dbname=dbhvente", $login, $pass);
         $dbh-> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         // Variables 
@@ -60,7 +60,7 @@
 
         // Last name client
         if (empty($_POST["last_name"])){
-            $error_last_name = "Renseigner last name";
+            $error_last_name = "Renseigner prénom";
             $error++;
         }else{
             $last_name = $_POST["last_name"];
@@ -68,7 +68,7 @@
 
         // First name client
         if (empty($_POST["first_name"])){
-            $error_first_name = "Renseigner first name";
+            $error_first_name = "Renseigner nom";
             $error++;
         }else{
             $first_name = $_POST["first_name"];
@@ -114,31 +114,14 @@
 
         // Insertion of data base
         if($error == 0){
-        $query = "SELECT * from client where email = '".$email."'
-        ";
-            $_SESSION['query'] = $query; 
-            $statement = $dbh->prepare($query);
-            if($statement->execute()){
-                $total_row = $statement->rowCount();
-                if($total_row > 0){
-                    $result = $statement->fetchAll();
-                    foreach($result as $row){
-                        if($row['email'] == $email){
-                            $error++;
-                            $error_email = 'Ce utilisateur existe déjà';
-                        }
-                    }
-                }
-                else{
-                    $query = "insert into client(nbpersonne, reservdate, heure, prenom, nom, sexe, email, telephone, telephone2) values(?,?,?,?,?,?,?,?,?)";
-                    $statement2 = $dbh->prepare($query);
-                    $statement2->execute(array($people,$date,$time,$last_name,$first_name,$genre,$email,$phone,$phone2));
-                
-                    $output = array(
-                        "success" => "Reservation effectuée avec success",
-                    );
-                }
-            }
+
+            $query = "insert into client(nbpersonne, reservdate, heure, prenom, nom, sexe, email, telephone, telephone2) values(?,?,?,?,?,?,?,?,?)";
+            $statement2 = $dbh->prepare($query);
+            $statement2->execute(array($people,$date,$time,$last_name,$first_name,$genre,$email,$phone,$phone2));
+        
+            $output = array(
+                "success" => "Reservation effectuée avec success",
+            );
         }
     
         // Part of errors

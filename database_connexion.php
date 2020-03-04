@@ -1,5 +1,5 @@
 <?php
-    $connect = new PDO("mysql:host=localhost;dbname=dbkone", "root", "");    
+    $connect = new PDO("mysql:host=localhost;dbname=dbhvente", "root", "");    
     $base_url = "index.php";
 
     function fill_unit_select_box($connect) {

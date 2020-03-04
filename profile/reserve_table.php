@@ -163,13 +163,13 @@
                                         <div class="form-field">
                                             <i class="icon icon-chevron-down"></i>
                                             <select name="people" id="people" class="form-control">
-                                                <option value="">people</option>
-                                                <option value="1">1 people</option>
-                                                <option value="2">2 people</option>
-                                                <option value="3">3 people</option>
-                                                <option value="4">4 people</option>
-                                                <option value="5">5 people</option>
-                                                <option value="10">6+ people</option>
+                                                <option value="">Personne</option>
+                                                <option value="1">1 Personne</option>
+                                                <option value="2">2 Personnes</option>
+                                                <option value="3">3 Personnes</option>
+                                                <option value="4">4 Personnes</option>
+                                                <option value="5">5 Personnes</option>
+                                                <option value="10">6+ Personnes</option>
                                             </select>
                                             <div id="error_people" class="text-danger"></div>
                                         </div>
@@ -189,7 +189,7 @@
 
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="time">Time</label><br>
+                                        <label for="time">Temps</label><br>
                                         <div class="form-field">
                                             <i class="icon icon-clock"></i>
                                             <input type="text" id="time" name="time" class="form-control">
@@ -299,16 +299,6 @@
                 <div class="container" style="margin-left: 35rem;">
                     <div class="row" style="margin-left: 17.5em; width: 100%!important">
 
-                        <!-- <div class="col-lg-3 col-md-6">
-                            <div class="single-feature" style="border: 1px solid; border-radius: 15px">
-                                <a href="pay_type.php" class="title">
-                                    <i class="fa fa-euro" style="font-size: 48px; color: black"></i>
-                                    <h3> Money </h3>
-                                </a>
-                                <p>Doit ouvrir</p>
-                            </div>
-                        </div> -->
-
                         <div class="col-lg-3 col-md-6">
                             <div class="single-feature" style="border: 1px solid; border-radius: 15px">
                                 <a href="commande.php" class="title">
@@ -318,16 +308,6 @@
                                 <p>Doit ouvrir</p>
                             </div>
                         </div>
-
-                        <!-- <div class="col-lg-3 col-md-6">
-                            <div class="single-feature" style="border: 1px solid; border-radius: 15px">
-                                <a href="#" class="title">
-                                    <i class="fa fa-cc-paypal" style="font-size: 48px; color: black"></i>
-                                    <h3>Paiement sécurisé</h3>
-                                </a>
-                                <p>Doit ouvrir</p>
-                            </div>
-                        </div> -->
 
                     </div>
                 </div>

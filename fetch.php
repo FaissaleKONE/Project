@@ -5,7 +5,7 @@
   $pass = "";
 
   try {
-    $dbh = new PDO ("mysql:host=$serveur;dbname=dbkone", $login, $pass);
+    $dbh = new PDO ("mysql:host=$serveur;dbname=dbhvente", $login, $pass);
     $dbh-> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Variables
@@ -26,7 +26,7 @@
 
     // Last name client
     if (empty($_POST["ename"])){
-      $error_ename = "Renseigner last name";
+      $error_ename = "Renseigner prénom";
       $error++;
     }else{
       $ename = $_POST["ename"];
@@ -34,7 +34,7 @@
 
     // First name client
     if (empty($_POST["lastname"])){
-      $error_lastname = "Renseigner first name";
+      $error_lastname = "Renseigner nom";
       $error++;
     }else{
       $lastname = $_POST["lastname"];
@@ -59,31 +59,14 @@
 
     // Insertion of data base
     if($error == 0){
-      $query = "SELECT * from user where email = '".$mail."'
-      ";
-        $_SESSION['query'] = $query; 
-      $statement = $dbh->prepare($query);
-      if($statement->execute()){
-        $total_row = $statement->rowCount();
-        if($total_row > 0){
-          $result = $statement->fetchAll();
-          foreach($result as $row){
-            if($row['email'] == $mail){
-              $error++;
-              $error_mail = 'Ce utilisateur existe déjà';
-            }
-          }
-        }
-        else{
-          $query = "insert into user(nom, prenom, email, message) values(?,?,?,?)";
-          $statement2 = $dbh->prepare($query);
-          $statement2->execute(array($ename,$lastname,$mail,$user_message));
-          
-            $output = array(
-              "success" => "Message envoyé avec success",
-            );
-        }
-      }
+      
+      $query = "insert into user(nom, prenom, email, message) values(?,?,?,?)";
+      $statement2 = $dbh->prepare($query);
+      $statement2->execute(array($ename,$lastname,$mail,$user_message));
+      
+        $output = array(
+          "success" => "Message envoyé avec success",
+        );
     }
 
     // Part of errors
